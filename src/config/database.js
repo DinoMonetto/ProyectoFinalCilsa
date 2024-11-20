@@ -6,10 +6,7 @@ dotenv.config(); // Configura dotenv para que lea las variables de entorno del a
 const connectDB = async () => {
   try {
     // Intenta establecer la conexión con MongoDB usando la URI proporcionada.
-    await mongoose.connect(process.env.MONGO_URI, {
-      useNewUrlParser: true, // Usa el analizador de URL más reciente.
-      useUnifiedTopology: true, // Usa el motor de administración unificado.
-    });
+    await mongoose.connect(process.env.MONGO_URI);
     console.log('MongoDB conectado'); // Mensaje de éxito si se conecta correctamente.
   } catch (error) {
     console.error('Error al conectar a MongoDB:', error.message); // Muestra el error en caso de fallo.

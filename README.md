@@ -93,4 +93,23 @@ Realiza una solicitud POST para crear una tarea.
 Verifica que puedes obtenerla con una solicitud GET.
 Actualiza la tarea con PUT.
 Elimina la tarea con DELETE.
+<<<<<<< HEAD
 >>>>>>> 6d7cb71 (Inicio del proyecto y subida de todos los archivos)
+=======
+
+
+## Pruebas
+
+### 1. Verificar Conexión a la Base de Datos
+- Asegúrate de que el archivo `.env` contenga la conexión correcta.
+- Ejecuta `npm start` y confirma que el mensaje de conexión aparece en la consola.
+
+### 2. Pruebas de API con Postman
+- Prueba los endpoints CRUD utilizando los datos de ejemplo proporcionados.
+- Confirma los resultados esperados para cada operación.
+
+### 3. Flujo Completo
+- Crea tareas, obtén la lista, actualiza estados y elimina tareas.
+- Asegúrate de que el sistema maneje correctamente los errores.
+
+>>>>>>> e61fc5a (Solucionando problemas CRUD)
