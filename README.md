@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+
 # ProyectoFinalCilsa
-=======
+
 Proyecto Final CILSA - To-Do List
 Descripción
 Este proyecto es una aplicación web para gestionar una lista de tareas. Los usuarios pueden crear, leer, actualizar y eliminar tareas. La aplicación está diseñada con una arquitectura modular, separando el frontend, backend y la configuración de la base de datos en ramas específicas.
@@ -93,9 +93,8 @@ Realiza una solicitud POST para crear una tarea.
 Verifica que puedes obtenerla con una solicitud GET.
 Actualiza la tarea con PUT.
 Elimina la tarea con DELETE.
-<<<<<<< HEAD
->>>>>>> 6d7cb71 (Inicio del proyecto y subida de todos los archivos)
-=======
+
+
 
 
 ## Pruebas
@@ -112,4 +111,4 @@ Elimina la tarea con DELETE.
 - Crea tareas, obtén la lista, actualiza estados y elimina tareas.
 - Asegúrate de que el sistema maneje correctamente los errores.
 
->>>>>>> e61fc5a (Solucionando problemas CRUD)
+
