@@ -8,6 +8,8 @@ import dotenv from 'dotenv'; // Importa dotenv para manejar variables de entorno
 dotenv.config(); // Configura dotenv.
 
 const app = express(); // Crea la aplicación Express.
+const PORT = process.env.PORT || 5000; // Toma el puerto del archivo .env o usa el puerto 5000 por defecto.
+
 connectDB(); // Conecta con la base de datos.
 
 app.use(cors()); // Habilita CORS para todas las solicitudes.
@@ -16,5 +18,10 @@ app.use(bodyParser.json()); // Configura body-parser para procesar datos JSON.
 app.use('/api/tasks', taskRoutes); // Configura las rutas para las tareas.
 
 app.get('/', (req, res) => res.send('API funcionando')); // Ruta base de prueba.
+
+// Inicia el servidor y escucha en el puerto especificado
+app.listen(PORT, () => {
+  console.log(`Servidor escuchando en http://localhost:${PORT}`);
+});
 
 export default app; // Exporta la aplicación para iniciar el servidor.
