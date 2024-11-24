@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+html, body {
+    height: 100%; /* Asegura que html y body ocupen toda la altura del viewport */
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.task-page {
+    background-image: url("../public/bgitasks.png");
+    background-size: 600px;
+    position: relative;
+    min-width: 45em;
+    overflow: auto;
+    flex-grow: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+    max-width: 65rem;
+    width: 100%;
+    margin: 3em auto 3em auto;
+    overflow: hidden;
+    height: auto;
+    padding-top: 0.5em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.card {
+    background-color: #dce7ff  !important;
+    max-width: 65rem;
+    width: 100%;
+    margin: 2em auto 2em auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid rgb(170, 191, 194);
+    height: auto;
+    padding: 1em;
+    box-shadow: 1px 1px 9px 1px rgb(150, 150, 150);
 }
 
-.App-link {
-  color: #61dafb;
+.btn-bd-primary {
+    --bs-btn-color: #f0fbfa !important;
+    --bs-btn-bg: #5171aa !important;
+    --bs-btn-border-color: #5171aa;
+    --bs-btn-hover-color: #f0fbfa;
+    --bs-btn-hover-bg: #5172aaa9;
+    --bs-btn-font-weight: 500 !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form input:hover {
+    background-color: white;
+    border: solid 1px #3e6097;
+    box-shadow: 0 0 5px #3e6097;
+}
+
+form input:focus {
+    background-color: white;
+    border: solid 1px #3e6097 !important;
+    box-shadow: 0 0 5px #3e6097 !important;
+}
+
+form textarea:hover {
+    background-color: white;
+    border: solid 1px #3e6097;
+    box-shadow: 0 0 5px #3e6097;
+}
+
+form textarea:focus {
+    background-color: white;
+    border: solid 1px #3e6097 !important;
+    box-shadow: 0 0 5px #3e6097 !important;
 }

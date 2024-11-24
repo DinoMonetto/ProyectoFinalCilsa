@@ -1,25 +1,41 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useEffect } from 'react';
 import TaskItem from './TaskItem';
 
-const TaskList = () => {
-    const [tasks, setTasks] = useState([]);
+const TaskList = ({ tasks, reload, handleEditTask, taskToEdit }) => {
+  // Filtrar tareas pendientes y completadas, excluyendo la tarea en edición
+  const pendingTasks = tasks.filter(
+    (task) => task.status === 'pending' && task._id !== taskToEdit?._id
+  );
+  const completedTasks = tasks.filter(
+    (task) => task.status === 'completed' && task._id !== taskToEdit?._id
+  );
 
-    useEffect(() => {
-        axios.get('http://localhost:5000/api/tasks') // Asegúrate de que sea el puerto correcto
+  return (
+    <div>
+    {pendingTasks.length > 0 && (
+    <div className='card'>
+      <h2 className='pb-2'>Pendientes</h2>
+      <ul>
+        {pendingTasks.map(task => (
+          <TaskItem key={task._id} task={task} onActionCompleted={reload} handleEditTask={handleEditTask} />
+        ))}
+      </ul>
 
-            .then(response => setTasks(response.data))
-            .catch(error => console.error('Error fetching tasks:', error));
-    }, []);
+      </div>
+    )}
 
-    return (
-        <div>
-            <h2>Lista de Tareas</h2>
-            {tasks.map(task => (
-                <TaskItem key={task._id} task={task} />
-            ))}
-        </div>
-    );
+    {completedTasks.length > 0 && (
+      <div className='card'>
+      <h2 className='pb-2'>Completadas</h2>
+      <ul>
+        {completedTasks.map(task => (
+          <TaskItem key={task._id} task={task} onActionCompleted={reload} handleEditTask={handleEditTask}/>
+        ))}
+      </ul>
+      </div>
+    )}
+    </div>
+  );
 };
 
 export default TaskList;
