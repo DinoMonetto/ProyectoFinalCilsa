@@ -3,13 +3,13 @@ import axios from 'axios';
 
 const TaskItem = ({ task }) => {
     const deleteTask = () => {
-        axios.delete(`http://localhost:5001/api/tasks/${task._id}`)
+        axios.delete(`http://localhost:5000/api/tasks/${task._id}`)
             .then(response => console.log(response.data))
             .catch(error => console.error('Error deleting task:', error));
     };
 
     const toggleStatus = () => {
-        axios.put(`http://localhost:5001/api/tasks/${task._id}`, { status: task.status === 'pending' ? 'completed' : 'pending' })
+        axios.put(`http://localhost:5000/api/tasks/${task._id}`, { status: task.status === 'pending' ? 'completed' : 'pending' })
             .then(response => console.log(response.data))
             .catch(error => console.error('Error updating task:', error));
     };

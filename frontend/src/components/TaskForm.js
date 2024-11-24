@@ -9,9 +9,8 @@ const TaskForm = ({ onTaskAdded }) => {
         e.preventDefault();
         const newTask = { name, description };
         axios.post('http://localhost:5000/api/tasks', newTask)
-
             .then(response => {
-                onTaskAdded(response.data); // Agrega la tarea recién creada
+                onTaskAdded(response.data);  // Llamar la función pasada como prop
                 setName('');
                 setDescription('');
             })
@@ -20,8 +19,18 @@ const TaskForm = ({ onTaskAdded }) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <input type="text" value={name} onChange={e => setName(e.target.value)} placeholder="Nombre de tarea" required />
-            <textarea value={description} onChange={e => setDescription(e.target.value)} placeholder="Descripción" />
+            <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Nombre de tarea"
+                required
+            />
+            <textarea
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+                placeholder="Descripción"
+            />
             <button type="submit">Agregar tarea</button>
         </form>
     );
