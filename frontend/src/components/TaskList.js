@@ -6,7 +6,8 @@ const TaskList = () => {
     const [tasks, setTasks] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5001/api/tasks')
+        axios.get('http://localhost:5000/api/tasks') // Asegúrate de que sea el puerto correcto
+
             .then(response => setTasks(response.data))
             .catch(error => console.error('Error fetching tasks:', error));
     }, []);

@@ -8,9 +8,10 @@ const TaskForm = ({ onTaskAdded }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const newTask = { name, description };
-        axios.post('http://localhost:5001/api/tasks', newTask)
+        axios.post('http://localhost:5000/api/tasks', newTask)
+
             .then(response => {
-                onTaskAdded(response.data);
+                onTaskAdded(response.data); // Agrega la tarea recién creada
                 setName('');
                 setDescription('');
             })

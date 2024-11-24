@@ -12,8 +12,8 @@ const PORT = process.env.PORT_APP || 5000; // Toma el puerto del archivo .env o 
 
 connectDB(); // Conecta con la base de datos.
 
-app.use(cors({// Habilita CORS para todas las solicitudes.
-    origin: 'http://localhost:3000'  // Esto permite solicitudes solo desde este puerto
+app.use(cors({ // Habilita CORS para todas las solicitudes.
+    origin: 'http://localhost:3001',  // Esto permite solicitudes solo desde este puerto
 }));
 ;
 app.use(bodyParser.json()); // Configura body-parser para procesar datos JSON.

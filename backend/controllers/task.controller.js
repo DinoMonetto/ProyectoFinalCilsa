@@ -10,15 +10,16 @@ export const getTasks = async (req, res) => {
 };
 
 export const createTask = async (req, res) => {
-  const { name, description } = req.body; // Extrae los datos enviados en la solicitud.
+  const { name, description } = req.body;  // Extrae los datos enviados en la solicitud.
   try {
-    const newTask = new Task({ name, description }); // Crea una nueva tarea con los datos proporcionados.
-    await newTask.save(); // Guarda la tarea en la base de datos.
-    res.status(201).json(newTask); // Responde con la tarea creada y un estado 201 (creado).
+    const newTask = new Task({ name, description });  // Extrae los datos enviados en la solicitud.
+    await newTask.save();  // Guarda la tarea en la base de datos.
+    res.status(201).json(newTask);  // Responde con la tarea creada y un estado 201 (creado).
   } catch (error) {
-    res.status(400).json({ error: error.message }); // Maneja errores y responde con un estado 400.
+    res.status(400).json({ error: error.message });  // Maneja errores y responde con un estado 400.
   }
 };
+
 
 export const updateTask = async (req, res) => {
   const { id } = req.params; // Obtiene el ID de la tarea desde los parámetros de la URL.
