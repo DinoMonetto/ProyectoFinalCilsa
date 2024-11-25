@@ -33,7 +33,8 @@ git checkout frontend
 
 Configurar MongoDB: Crea un archivo .env en la raíz del proyecto con el siguiente contenido:
 
-PORT=5000
+PORT_SERVER=4000
+PORT_APP = 5000
 MONGO_URI=mongodb+srv://dinolmonetto:123456dD.@monetto.iz9zzbq.mongodb.net/?retryWrites=true&w=majority
 REACT_APP_API_URL=http://localhost:5000/api/tasks
 
