@@ -1,0 +1,10 @@
+nav.navbar {
+    background-color: #3e6097 !important;
+    font-weight: 500;
+    font-size: larger;
+    box-shadow: 0px 0px 8px 0px #c4c4c4;
+}
+
+nav.navbar a {
+    color: #f0fbfa !important;
+}

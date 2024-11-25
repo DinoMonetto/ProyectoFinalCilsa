@@ -1,0 +1,68 @@
+html, body {
+    height: 100%; /* Asegura que html y body ocupen toda la altura del viewport */
+    margin: 0;
+}
+
+.task-page {
+    background-image: url("../public/bgitasks.png");
+    background-size: 600px;
+    position: relative;
+    min-width: 45em;
+    overflow: auto;
+    flex-grow: 1;
+}
+
+h1 {
+    max-width: 65rem;
+    width: 100%;
+    margin: 3em auto 3em auto;
+    overflow: hidden;
+    height: auto;
+    padding-top: 0.5em;
+}
+
+.card {
+    background-color: #dce7ff  !important;
+    max-width: 65rem;
+    width: 100%;
+    margin: 2em auto 2em auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid rgb(170, 191, 194);
+    height: auto;
+    padding: 1em;
+    box-shadow: 1px 1px 9px 1px rgb(150, 150, 150);
+}
+
+.btn-bd-primary {
+    --bs-btn-color: #f0fbfa !important;
+    --bs-btn-bg: #5171aa !important;
+    --bs-btn-border-color: #5171aa;
+    --bs-btn-hover-color: #f0fbfa;
+    --bs-btn-hover-bg: #5172aaa9;
+    --bs-btn-font-weight: 500 !important;
+}
+
+form input:hover {
+    background-color: white;
+    border: solid 1px #3e6097;
+    box-shadow: 0 0 5px #3e6097;
+}
+
+form input:focus {
+    background-color: white;
+    border: solid 1px #3e6097 !important;
+    box-shadow: 0 0 5px #3e6097 !important;
+}
+
+form textarea:hover {
+    background-color: white;
+    border: solid 1px #3e6097;
+    box-shadow: 0 0 5px #3e6097;
+}
+
+form textarea:focus {
+    background-color: white;
+    border: solid 1px #3e6097 !important;
+    box-shadow: 0 0 5px #3e6097 !important;
+}
